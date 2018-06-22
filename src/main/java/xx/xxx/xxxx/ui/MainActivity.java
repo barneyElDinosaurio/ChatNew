@@ -31,7 +31,6 @@ public class MainActivity extends Activity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
@@ -57,7 +56,7 @@ public class MainActivity extends Activity
 
         //Set action bar
         actionBar = getActionBar();
-        actionBar.setBackgroundDrawable((getResources().getDrawable(R.drawable.ic_action_add_person)));
+        actionBar.setBackgroundDrawable((getResources().getDrawable(R.drawable.barrasuperior)));
         actionBar.setDisplayShowTitleEnabled(false);
 
         //ViewPager
