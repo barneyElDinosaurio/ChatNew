@@ -6,21 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+
+
     <!-- As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions. -->
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/caratula_new">
 
-        <TextView
-            android:id="@+id/papiTexto"
-            android:layout_height="wrap_content"
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:text="papito"/>
+            android:layout_height="310dp"></android.support.v4.view.ViewPager>
 
-    </FrameLayout>
+        <Button
+            android:id="@+id/btn1"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewPager"
+            android:layout_marginTop="-2dp" />
 
+        <Button
+            android:id="@+id/btn2"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="96dp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+    
     <!-- The drawer is given a fixed width in dp and extends the full height of
          the container. -->
     <fragment
@@ -29,6 +60,7 @@
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        tools:layout="@layout/drawer_main" />
+        tools:layout="@layout/drawer_main"></fragment>
+
 
 </android.support.v4.widget.DrawerLayout>
