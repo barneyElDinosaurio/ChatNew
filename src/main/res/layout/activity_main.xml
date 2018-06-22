@@ -11,7 +11,15 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/papiTexto"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="papito"/>
+
+    </FrameLayout>
 
     <!-- The drawer is given a fixed width in dp and extends the full height of
          the container. -->
