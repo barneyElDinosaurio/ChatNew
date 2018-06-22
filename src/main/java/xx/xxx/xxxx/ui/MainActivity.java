@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -39,6 +40,8 @@ public class MainActivity extends Activity
     ViewPager viewPager ;
     ActionBar actionBar;
     Button btn1,btn2,btn3;
+
+    boolean e1= false,e2= false,e3= false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,17 +99,80 @@ public class MainActivity extends Activity
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(e1 == true){
+            if (e1 == true && e2 == true){
+                if (e1 == true && e2 == true && e3== true){
+                    startActivity(new Intent(this,ConversationActivity.class));
+                }
+            }
+        }
+
+    }
+
+    @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         switch (position){
             case 0:
-                Toast.makeText(this, "menu1", Toast.LENGTH_SHORT).show();
+                e1 = false;
+                e2 = false;
+                e3 = false;
                 break;
             case 1:
-                Toast.makeText(this, "menu2", Toast.LENGTH_SHORT).show();
+                e1 = false;
+                e2 = false;
+                e3 = false;
                 break;
             case 2:
-                Toast.makeText(this, "menu3", Toast.LENGTH_SHORT).show();
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 3:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 4:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 5:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 6:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 7:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 8:
+                e1 = false;
+                e2 = false;
+                e3 = false;
+                break;
+            case 9:
+                Toast.makeText(this, "e1: "+e1+" e2: "+e2+" e3: "+e3, Toast.LENGTH_SHORT).show();
+                e3 = true;
+                if(e1 == true && e2 == true && e3 == true) startActivity(new Intent(this,ConversationActivity.class));
+                break;
+            case 10:
+                Toast.makeText(this, "e1: "+e1+" e2: "+e2+" e3: "+e3, Toast.LENGTH_SHORT).show();
+                e2 = true;
+                break;
+            case 11:
+                Toast.makeText(this, "e1: "+e1+" e2: "+e2+" e3: "+e3, Toast.LENGTH_SHORT).show();
+                e1 = true;
                 break;
         }
     }
