@@ -8,6 +8,7 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,10 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import xx.xxx.xxxx.R;
+import xx.xxx.xxxx.ui.adapter.ViewPagerAdapter;
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -34,7 +37,10 @@ public class MainActivity extends Activity
      */
     private CharSequence mTitle;
 
+    ViewPager viewPager ;
     ActionBar actionBar;
+    Button btn1,btn2,btn3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +59,41 @@ public class MainActivity extends Activity
         actionBar = getActionBar();
         actionBar.setBackgroundDrawable((getResources().getDrawable(R.drawable.ic_action_add_person)));
         actionBar.setDisplayShowTitleEnabled(false);
+
+        //ViewPager
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(viewPagerAdapter);
+
+        //Buttons
+        //Btn1
+        btn1 = (Button)findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "btn1", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Btn2
+        btn2 = (Button)findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "btn2", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Btn3
+        btn3 = (Button)findViewById(R.id.btn3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "btn3", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
