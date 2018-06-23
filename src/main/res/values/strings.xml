@@ -748,7 +748,7 @@
     <string name="size_of_board">3</string>
     <string name="X">"   X   "</string>
     <string name="O">"   O   "</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">McDonald\'s</string>
     <!--Menu McDonalds-->
     <string name="title_section1">Inicio</string>
     <string name="title_section2">McDelivery</string>
