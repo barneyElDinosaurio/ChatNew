@@ -45,7 +45,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logoapp"
+        android:icon="@drawable/logon"
         android:label=""
         android:networkSecurityConfig="@xml/network_security_configuration"
         android:screenOrientation="portrait"
@@ -94,6 +94,7 @@
             android:launchMode="singleTask"
             android:minHeight="300dp"
             android:minWidth="300dp"
+            android:noHistory="true"
             android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".ui.StartConversationActivity"
