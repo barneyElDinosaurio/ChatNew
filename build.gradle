@@ -50,9 +50,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.github.nisrulz:sensey:1.7.0'
-    compile 'com.android.support:multidex:1.0.0'
     playstoreCompile 'com.google.android.gms:play-services-gcm:10.0.1'
-    compile 'com.android.support.constraint:constraint-layout:1.1.2'
+
 }
 
 ext {
@@ -66,7 +65,6 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        multiDexEnabled true
 
         minSdkVersion 14
         targetSdkVersion 25
