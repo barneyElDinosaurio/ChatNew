@@ -324,9 +324,6 @@ public class ConversationActivity extends XmppActivity
 				hideConversationsOverview();
 				openConversation();
 
-
-
-
 				}
 		});
 

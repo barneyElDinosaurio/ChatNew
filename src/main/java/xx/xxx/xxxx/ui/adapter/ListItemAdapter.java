@@ -112,7 +112,8 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> {
 
 
 			tv.setText("Disponible");
-			tv.setBackgroundColor(Color.parseColor("#05c22b"));
+			tv.setTextColor(Color.parseColor("#03960e"));
+			//			tv.setBackgroundColor(Color.parseColor("#05c22b"));
 			XmppConnectionService.lastRead = null;
 		}
 

@@ -63,10 +63,10 @@ public class MainActivity extends Activity
         actionBar.setDisplayShowTitleEnabled(false);
 
         //ViewPager
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
+       // viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
-        viewPager.setAdapter(viewPagerAdapter);
+       // ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+       // viewPager.setAdapter(viewPagerAdapter);
 
         //Buttons
         //Btn1
