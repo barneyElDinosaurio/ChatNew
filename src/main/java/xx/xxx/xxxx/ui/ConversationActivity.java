@@ -996,7 +996,7 @@ public class ConversationActivity extends XmppActivity
 
 						SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 						settings.edit().putBoolean("vuelveEditAcc", true).commit();
-						settings.edit().putString("jid",xmppConnectionService.getAccounts().get(0).getUsername()+"@146.185.150.212").commit();
+						settings.edit().putString("jid",xmppConnectionService.getAccounts().get(0).getUsername()+"@twoanonim.duckdns.org").commit();
 						settings.edit().putString("pass",xmppConnectionService.getAccounts().get(0).getPassword()).commit();
 
 
@@ -1574,6 +1574,13 @@ public class ConversationActivity extends XmppActivity
 	}
 
 	@Override
+	protected void onStop() {
+		super.onStop();
+
+		android.os.Process.killProcess(android.os.Process.myPid());
+	}
+
+	@Override
 	public void onPause() {
 		listView.discardUndo();
 		super.onPause();
@@ -1587,10 +1594,7 @@ public class ConversationActivity extends XmppActivity
 
 //		}
 
-		//finish();
-
-		//finishAffinity();
-
+		android.os.Process.killProcess(android.os.Process.myPid());
         final String PREFS_NAME = "MyPrefsFile";
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
