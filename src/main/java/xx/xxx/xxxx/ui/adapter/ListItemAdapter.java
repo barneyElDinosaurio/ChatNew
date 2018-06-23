@@ -84,7 +84,8 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> {
 //			tagLayout.removeAllViewsInLayout();
 
 			tv.setText("Desconectado");
-			tv.setBackgroundColor(Color.parseColor("#db0606"));
+			tv.setTextColor(Color.parseColor("#c80004"));
+			//tv.setBackgroundColor(Color.parseColor("#00a201"));
 
 
 		} else if(tags.size() > 0 || this.showDynamicTags) {
@@ -92,7 +93,8 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> {
 //			tagLayout.removeAllViewsInLayout();
 
 			tv.setText("Disponible");
-			tv.setBackgroundColor(Color.parseColor("#05c22b"));
+			tv.setTextColor(Color.parseColor("#03960e"));
+			//tv.setBackgroundColor(Color.parseColor("#05c22b"));
 
 		}
 
@@ -101,7 +103,8 @@ public class ListItemAdapter extends ArrayAdapter<ListItem> {
 //			tagLayout.removeAllViewsInLayout();
 
 			tv.setText("Mensaje");
-			tv.setBackgroundColor(Color.parseColor("#4747fa"));
+			tv.setTextColor(Color.parseColor("#039dd6"));
+			//tv.setBackgroundColor(Color.parseColor("#4747fa"));
 			NotificationService.nombre = null;
 		}
 
