@@ -45,7 +45,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/calendar_icon"
+        android:icon="@drawable/logoapp"
         android:label=""
         android:networkSecurityConfig="@xml/network_security_configuration"
         android:screenOrientation="portrait"
@@ -132,7 +132,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="http" />
-                <data android:host="146.185.150.212" />
+                <data android:host="twoanonim.duckdns.org" />
                 <data android:pathPrefix="/i/" />
                 <data android:pathPrefix="/j/" />
             </intent-filter>
@@ -283,7 +283,8 @@
             android:label="@string/app_name"></activity>
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -292,6 +293,9 @@
             </intent-filter>
 
         </activity>
+
+        <activity android:name=".ui.LoginFb"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
