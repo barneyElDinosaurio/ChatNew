@@ -1557,11 +1557,10 @@ public class ConversationActivity extends XmppActivity
 	public void onStart() {
 		super.onStart();
 		this.mRedirected.set(false);
+
 		if (this.xmppConnectionServiceBound) {
 
 			//Toast.makeText(getBaseContext(),xmppConnectionService.getAccounts().get(0).getUsername(),Toast.LENGTH_LONG).show();
-
-//			xmppConnectionService.getAccounts().get(0).
 
 			this.onBackendConnected();
 
@@ -1577,7 +1576,8 @@ public class ConversationActivity extends XmppActivity
 	protected void onStop() {
 		super.onStop();
 
-		android.os.Process.killProcess(android.os.Process.myPid());
+        //System.exit(0);
+
 	}
 
 	@Override
@@ -1586,16 +1586,9 @@ public class ConversationActivity extends XmppActivity
 		super.onPause();
 		this.mActivityPaused = true;
 
-//		if(mConversationFragment.isVisible()) {
-			//Log.e("PRIM","BLIM");
+		finishAffinity();
 
-//		System.exit(0);
-
-
-//		}
-
-		android.os.Process.killProcess(android.os.Process.myPid());
-        final String PREFS_NAME = "MyPrefsFile";
+		final String PREFS_NAME = "MyPrefsFile";
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
