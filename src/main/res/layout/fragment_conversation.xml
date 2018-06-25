@@ -13,7 +13,7 @@
         android:layout_above="@+id/snackbar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/fondochat"
+        android:background="?attr/color_background_secondary"
         android:divider="@null"
         android:dividerHeight="0dp"
         android:listSelector="@android:color/transparent"
